@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://farazkhan09218.github.io/Farazkhanportfolio092189/sitemap.xml
