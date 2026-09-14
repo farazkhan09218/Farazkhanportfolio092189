@@ -778,3 +778,571 @@ button:hover{
 .service-card button:hover{
     transform:scale(1.05);
 }
+footer {
+    text-align: center;
+    padding: 25px 20px;
+    background: #080f1f;
+}
+
+footer h2 {
+    margin: 0 0 10px;
+    font-size: 30px;
+    color: #8b5cf6;
+}
+
+.footer-tagline {
+    margin: 0 0 30px;
+    font-size: 20px;
+    color: white;
+}
+
+/* Social icons */
+.social-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+
+    width: 100%;
+    margin: 0 auto 25px;
+}
+
+.social-icons a {
+    width: 48px;
+    height: 48px;
+
+    flex: 0 0 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+    border-radius: 7px;
+
+    text-decoration: none;
+
+    transition: 0.3s ease;
+}
+
+/* Normal icons */
+.social-icons i {
+    font-size: 30px;
+}
+
+.social-icons a:nth-child(1) {
+    color: #0A66C2;
+}
+
+.social-icons a:nth-child(2) {
+    color: #1DBF73;
+}
+
+.social-icons a:nth-child(3) {
+    color: #060606;
+}
+
+.social-icons a:nth-child(4) {
+    color: #1877F2;
+}
+
+.social-icons a:nth-child(5) {
+    color: #E4405F;
+}
+
+.social-icons a:nth-child(6) {
+    color: #181717;
+}
+
+.social-icons .fiverr {
+    color: #1DBF73;
+}
+
+.social-icons .fiverr .brand-logo {
+    width: 30px;
+    height: 30px;
+    fill: currentColor;
+    display: block;
+}
+
+.social-icons .fiverr:hover {
+    background: #1DBF73;
+    color: white;
+}
+
+/* Upwork */
+.social-icons .upwork span {
+    font-family: Arial, sans-serif;
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: -1px;
+}
+
+/* Hover */
+.social-icons a:hover {
+    transform: translateY(-5px);
+}
+
+.social-icons a:nth-child(1):hover {
+    background: #0A66C2;
+    color: white;
+}
+
+.social-icons a:nth-child(2):hover {
+    background: #1DBF73;
+    color: white;
+}
+
+.social-icons a:nth-child(3):hover {
+    background: #14A800;
+    color: white;
+}
+
+.social-icons a:nth-child(4):hover {
+    background: #1877F2;
+    color: white;
+}
+
+/* Instagram - Original Style Gradient */
+.social-icons a:nth-child(5) {
+    color: #DD2A7B;
+}
+
+.social-icons a:nth-child(5) i {
+    background: linear-gradient(
+        45deg,
+        #F58529,
+        #FEDA77,
+        #DD2A7B,
+        #8134AF,
+        #515BD4
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.social-icons a:nth-child(5):hover {
+    background: linear-gradient(
+        45deg,
+        #F58529,
+        #FEDA77,
+        #DD2A7B,
+        #8134AF,
+        #515BD4
+    );
+}
+
+.social-icons a:nth-child(5):hover i {
+    background: none;
+    -webkit-text-fill-color: white;
+    color: white;
+}
+.social-icons a:nth-child(6):hover {
+    background: #181717;
+    color: white;
+}
+
+/* Copyright */
+.copyright {
+    margin: 0;
+    font-size: 18px;
+    color: white;
+}
+@media (max-width: 600px) {
+
+    .social-icons {
+        gap: 8px;
+    }
+
+    .social-icons a {
+        width: 44px;
+        height: 44px;
+        flex-basis: 44px;
+    }
+
+    .social-icons i {
+        font-size: 27px;
+    }
+
+    .footer-tagline {
+        font-size: 17px;
+    }
+
+    .copyright {
+        font-size: 16px;
+    }
+}
+/* =========================================
+   PROJECTS SECTION
+========================================= */
+
+.projects-section {
+    padding: 100px 0;
+    background: #f8fafc;
+}
+
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.projects-section .section-title {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 55px;
+}
+
+.projects-section .section-title span {
+    display: inline-block;
+    margin-bottom: 10px;
+
+    color: #8b5cf6;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.projects-section .section-title h2 {
+    margin: 0 0 15px;
+
+    font-size: 42px;
+    font-weight: 800;
+
+    color: #111827;
+}
+
+.projects-section .section-title p {
+    margin: 0;
+
+    color: #6b7280;
+
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   PROJECT GRID
+========================================= */
+
+.projects-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   PROJECT CARD
+========================================= */
+
+.project-card {
+    background: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+
+    transition: all 0.35s ease;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.15);
+}
+
+
+/* =========================================
+   PROJECT IMAGE
+========================================= */
+
+.project-image {
+    position: relative;
+
+    width: 100%;
+    height: 230px;
+
+    overflow: hidden;
+
+    background: #e5e7eb;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.08);
+}
+
+
+/* =========================================
+   IMAGE OVERLAY
+========================================= */
+
+.project-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(17, 24, 39, 0.65);
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-view-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    padding: 12px 20px;
+
+    border-radius: 8px;
+
+    background: white;
+    color: #111827;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.project-view-btn:hover {
+    background: #8b5cf6;
+    color: white;
+}
+
+
+/* =========================================
+   PROJECT CONTENT
+========================================= */
+
+.project-content {
+    padding: 28px;
+
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+}
+
+
+/* Category */
+
+.project-category {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    color: #8b5cf6;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+}
+
+
+/* Title */
+
+.project-content h3 {
+    margin: 0 0 12px;
+
+    color: #111827;
+
+    font-size: 23px;
+    font-weight: 750;
+
+    line-height: 1.3;
+}
+
+
+/* Description */
+
+.project-content p {
+    margin: 0 0 20px;
+
+    color: #6b7280;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   TECHNOLOGY TAGS
+========================================= */
+
+.project-tech {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 24px;
+}
+
+.project-tech span {
+    padding: 6px 10px;
+
+    background: #f3f4f6;
+
+    border-radius: 6px;
+
+    color: #374151;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================
+   PROJECT BUTTON
+========================================= */
+
+.project-btn {
+    margin-top: auto;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    width: fit-content;
+
+    padding: 11px 18px;
+
+    border-radius: 8px;
+
+    background: #8b5cf6;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.project-btn:hover {
+    background: #6d28d9;
+
+    transform: translateX(4px);
+}
+
+.project-btn i {
+    font-size: 12px;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 992px) {
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        padding: 0 25px;
+    }
+
+    .projects-section .section-title {
+        padding: 0 25px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .projects-section {
+        padding: 75px 0;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+
+        padding: 0 18px;
+    }
+
+    .projects-section .section-title h2 {
+        font-size: 32px;
+    }
+
+    .projects-section .section-title p {
+        font-size: 15px;
+    }
+
+    .project-image {
+        height: 220px;
+    }
+
+    .project-content {
+        padding: 22px;
+    }
+
+    .project-content h3 {
+        font-size: 21px;
+    }
+
+}
