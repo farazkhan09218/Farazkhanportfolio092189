@@ -1,11 +1,10 @@
-const words = [
-    "MNSUAM Student",
-    "Digital Marketing",
-    "SEO Expert",
-    "Canva Designer",
-    "AI Web Developer"
-];
 
+const words = [
+    "IT Student",
+    "AI Developer",
+    "Technical Content Writer",
+    "Digital Marketing & SEO Specialist"
+];
 let wordIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
