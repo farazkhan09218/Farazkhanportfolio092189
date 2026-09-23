@@ -415,62 +415,508 @@ button:hover{
 .certificate-card button:hover{
     background:#6d42ff;
 }
-/* ===========================
-   Contact Section
-=========================== */
+ /* =========================================
+    CONTACT SECTION
+ ========================================= */
 
-.contact{
-    padding:80px 10%;
-    background:#111827;
+.contact-section {
+    position: relative;
+    padding: 100px 0;
+    overflow: hidden;
 }
 
-.contact-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-    gap:40px;
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.contact-section .section-title {
+    max-width: 750px;
+    margin: 0 auto 65px;
 }
 
-.contact-info{
-    background:#1e293b;
-    padding:30px;
-    border-radius:15px;
+.contact-section .section-title span {
+    display: inline-block;
+    margin-bottom: 12px;
+
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-.contact-info h3{
-    color:#8f6bff;
-    margin-bottom:20px;
+.contact-section .section-title h2 {
+    margin-bottom: 18px;
+
+    font-size: 44px;
+    line-height: 1.2;
+    font-weight: 800;
 }
 
-.contact-info p{
-    color:#ddd;
-    line-height:1.8;
-    margin:12px 0;
+.contact-section .section-title p {
+    max-width: 650px;
+    margin: 0 auto;
+
+    font-size: 16px;
+    line-height: 1.8;
 }
 
-.contact-form{
-    display:flex;
-    flex-direction:column;
+
+/* =========================================
+   CONTACT WRAPPER
+========================================= */
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 30px;
+    align-items: stretch;
 }
 
-.contact-form input,
-.contact-form textarea{
-    padding:15px;
-    margin-bottom:20px;
-    border:none;
-    border-radius:10px;
-    background:#1e293b;
-    color:white;
-    font-size:16px;
+
+/* =========================================
+   CONTACT INFORMATION
+========================================= */
+
+.contact-info {
+    padding: 40px 35px;
+
+    border-radius: 22px;
+
+    border: 1px solid rgba(0, 0, 0, 0.08);
+
+    background: rgba(255, 255, 255, 0.75);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.05);
 }
 
-.contact-form textarea{
-    resize:none;
+.contact-intro {
+    margin-bottom: 35px;
 }
 
-.contact-form button{
-    width:220px;
+.contact-intro h3 {
+    margin-bottom: 12px;
+
+    font-size: 27px;
+    font-weight: 800;
 }
 
+.contact-intro p {
+    margin: 0;
+
+    font-size: 14px;
+    line-height: 1.8;
+
+    opacity: 0.8;
+}
+
+
+/* =========================================
+   CONTACT ITEM
+========================================= */
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+
+    margin-bottom: 25px;
+}
+
+.contact-icon {
+    width: 52px;
+    height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 14px;
+
+    border: 1px solid rgba(0, 0, 0, 0.08);
+
+    font-size: 18px;
+
+    transition:
+        transform 0.3s ease,
+        border-radius 0.3s ease;
+}
+
+.contact-item:hover .contact-icon {
+    transform: translateY(-3px);
+    border-radius: 17px;
+}
+
+.contact-details span {
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    opacity: 0.6;
+}
+
+.contact-details a,
+.contact-details p {
+    margin: 0;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    word-break: break-word;
+}
+
+
+/* =========================================
+   SOCIAL LINKS
+========================================= */
+
+.contact-social {
+    margin-top: 35px;
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.contact-social > span {
+    display: block;
+
+    margin-bottom: 15px;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    border: 1px solid rgba(0, 0, 0, 0.08);
+
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease,
+        border-radius 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.social-links a:hover {
+    transform: translateY(-4px);
+    border-radius: 13px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   CONTACT FORM
+========================================= */
+
+.contact-form-wrapper {
+    padding: 40px 40px;
+
+    border-radius: 22px;
+
+    border: 1px solid rgba(0, 0, 0, 0.08);
+
+    background: rgba(255, 255, 255, 0.75);
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 22px;
+}
+
+.form-group label {
+    display: block;
+
+    margin-bottom: 8px;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+
+    padding: 14px 16px;
+
+    border: 1px solid rgba(0, 0, 0, 0.12);
+
+    border-radius: 10px;
+
+    background: transparent;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 160px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    opacity: 0.5;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: currentColor;
+
+    box-shadow:
+        0 0 0 3px rgba(0, 0, 0, 0.04);
+}
+
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+.contact-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    padding: 14px 25px;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    border-radius: 10px;
+
+    background: transparent;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.3s ease,
+        gap 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.contact-submit:hover {
+    transform: translateY(-3px);
+    gap: 14px;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================================
+   BOTTOM CTA
+========================================= */
+
+.contact-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    margin-top: 30px;
+    padding: 30px 35px;
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(0, 0, 0, 0.08);
+
+    background: rgba(255, 255, 255, 0.7);
+}
+
+.contact-bottom h3 {
+    margin-bottom: 7px;
+
+    font-size: 21px;
+    font-weight: 750;
+}
+
+.contact-bottom p {
+    margin: 0;
+
+    font-size: 13px;
+
+    opacity: 0.75;
+}
+
+
+/* =========================================
+   WHATSAPP BUTTON
+========================================= */
+
+.whatsapp-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    flex-shrink: 0;
+
+    padding: 13px 20px;
+
+    border-radius: 10px;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.whatsapp-button i {
+    font-size: 17px;
+}
+
+.whatsapp-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 992px) {
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-section .section-title h2 {
+        font-size: 38px;
+    }
+
+    .contact-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .contact-section {
+        padding: 75px 0;
+    }
+
+    .contact-section .section-title {
+        margin-bottom: 45px;
+    }
+
+    .contact-section .section-title h2 {
+        font-size: 32px;
+    }
+
+    .contact-section .section-title p {
+        font-size: 14px;
+    }
+
+    .contact-info,
+    .contact-form-wrapper {
+        padding: 30px 25px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .contact-bottom {
+        padding: 25px;
+    }
+
+    .whatsapp-button {
+        width: 100%;
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+    .contact-section .section-title h2 {
+        font-size: 28px;
+    }
+
+    .contact-info,
+    .contact-form-wrapper {
+        padding: 25px 20px;
+    }
+
+    .contact-intro h3 {
+        font-size: 24px;
+    }
+
+    .contact-bottom h3 {
+        font-size: 19px;
+    }
+
+    .contact-submit {
+        width: 100%;
+    }
+}
 /* ===========================
    Floating WhatsApp
 =========================== */
@@ -1345,4 +1791,1048 @@ footer h2 {
         font-size: 21px;
     }
 
+}
+/* ===========================
+   HERO BUTTONS
+=========================== */
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.hero-buttons .btn {
+    margin-top: 0;
+}
+
+.secondary-btn {
+    background: transparent !important;
+    border: 2px solid #00d4ff !important;
+}
+
+.secondary-btn:hover {
+    background: linear-gradient(45deg, #8f6bff, #00d4ff) !important;
+}
+/* ================= SKILLS SECTION ================= */
+
+.skills {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.skills .section-title {
+    margin-bottom: 50px;
+}
+
+/* Skills Grid */
+.skills-container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Skill Card */
+.skill-card {
+    padding: 25px 22px;
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    text-align: left;
+
+    transition: 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-7px);
+    border-color: #00d4ff;
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.15);
+}
+
+/* Skill Name */
+.skill-card h3 {
+    margin-bottom: 15px;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    color: #ffffff;
+}
+
+/* Progress Bar Background */
+.bar {
+    width: 100%;
+    height: 10px;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Progress Bar */
+.fill {
+    height: 100%;
+
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    padding-right: 5px;
+
+    font-size: 0;
+    
+    background: linear-gradient(90deg, #8f6bff, #00d4ff);
+
+    transition: width 1s ease;
+}
+
+
+/* ================= SKILL PERCENTAGES ================= */
+
+.ai-developer {
+    width: 80%;
+}
+
+.writing {
+    width: 80%;
+}
+
+.dm {
+    width: 90%;
+}
+
+.seo {
+    width: 85%;
+}
+
+.canva {
+    width: 80%;
+}
+
+.html {
+    width: 90%;
+}
+
+.css {
+    width: 85%;
+}
+
+.js {
+    width: 75%;
+}
+
+.bootstrap {
+    width: 80%;
+}
+
+.python {
+    width: 75%;
+}
+
+.cpp {
+    width: 70%;
+}
+
+.ai {
+    width: 70%;
+}
+
+
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* Tablet */
+@media (max-width: 900px) {
+
+    .skills {
+        padding: 70px 5%;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+}
+
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .skills {
+        padding: 60px 5%;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .skill-card {
+        padding: 22px 18px;
+    }
+
+    .skill-card h3 {
+        font-size: 16px;
+    }
+
+}
+/* ================= PROJECTS SECTION ================= */
+
+.projects {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.projects .section-title {
+    margin-bottom: 15px;
+}
+
+.section-subtitle {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    color: #b8b8c7;
+    line-height: 1.7;
+}
+
+
+/* Projects Grid */
+
+.projects-container {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* Project Card */
+
+.project-card {
+    position: relative;
+
+    padding: 30px 25px;
+
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    text-align: left;
+
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #00d4ff;
+
+    box-shadow: 0 15px 35px rgba(0, 212, 255, 0.15);
+}
+
+
+/* Project Icon */
+
+.project-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 22px;
+
+    border-radius: 15px;
+
+    background: linear-gradient(135deg, #8f6bff, #00d4ff);
+
+    color: #ffffff;
+
+    font-size: 25px;
+}
+
+
+/* Project Title */
+
+.project-content h3 {
+    margin-bottom: 15px;
+
+    font-size: 21px;
+
+    color: #ffffff;
+}
+
+
+/* Project Description */
+
+.project-content p {
+    margin-bottom: 20px;
+
+    color: #b8b8c7;
+
+    line-height: 1.7;
+
+    font-size: 15px;
+}
+
+
+/* Technologies */
+
+.project-tech {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-bottom: 25px;
+}
+
+.project-tech span {
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    background: rgba(0, 212, 255, 0.10);
+
+    border: 1px solid rgba(0, 212, 255, 0.25);
+
+    color: #00d4ff;
+
+    font-size: 12px;
+
+    font-weight: 500;
+}
+
+
+/* View Project Button */
+
+.project-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 10px 18px;
+
+    border-radius: 8px;
+
+    background: linear-gradient(45deg, #8f6bff, #00d4ff);
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.project-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(0, 212, 255, 0.20);
+}
+
+
+/* ================= PROJECTS RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .projects {
+        padding: 70px 5%;
+    }
+
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .projects {
+        padding: 60px 5%;
+    }
+
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        padding: 25px 20px;
+    }
+
+}
+/* ================= EDUCATION SECTION ================= */
+
+.education {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.education .section-title {
+    margin-bottom: 15px;
+}
+
+.education .section-subtitle {
+    max-width: 650px;
+    margin: 0 auto 50px;
+    color: #b8b8c7;
+    line-height: 1.7;
+}
+
+
+/* Education Container */
+
+.education-container {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+
+/* Education Card */
+
+.education-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+
+    padding: 30px;
+
+    text-align: left;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 18px;
+
+    transition: all 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #00d4ff;
+
+    box-shadow: 0 15px 35px rgba(0, 212, 255, 0.12);
+}
+
+
+/* Education Icon */
+
+.education-icon {
+    min-width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: linear-gradient(135deg, #8f6bff, #00d4ff);
+
+    color: #ffffff;
+
+    font-size: 27px;
+}
+
+
+/* Education Content */
+
+.education-content {
+    flex: 1;
+}
+
+
+/* Date */
+
+.education-date {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    padding: 6px 12px;
+
+    border-radius: 20px;
+
+    background: rgba(0, 212, 255, 0.10);
+
+    color: #00d4ff;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* Degree */
+
+.education-content h3 {
+    margin: 5px 0 8px;
+
+    color: #ffffff;
+
+    font-size: 23px;
+}
+
+
+/* Institution */
+
+.education-content h4 {
+    margin-bottom: 15px;
+
+    color: #8f6bff;
+
+    font-size: 16px;
+
+    font-weight: 600;
+}
+
+
+/* Description */
+
+.education-content p {
+    margin-bottom: 18px;
+
+    color: #b8b8c7;
+
+    line-height: 1.7;
+
+    font-size: 15px;
+}
+
+
+/* Education Tags */
+
+.education-tags {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.education-tags span {
+    padding: 6px 11px;
+
+    border-radius: 20px;
+
+    background: rgba(143, 107, 255, 0.10);
+
+    border: 1px solid rgba(143, 107, 255, 0.25);
+
+    color: #c8baff;
+
+    font-size: 12px;
+
+    font-weight: 500;
+}
+
+
+/* ================= EDUCATION RESPONSIVE ================= */
+
+@media (max-width: 700px) {
+
+    .education {
+        padding: 60px 5%;
+    }
+
+    .education-card {
+        flex-direction: column;
+
+        padding: 25px 20px;
+
+        gap: 20px;
+    }
+
+    .education-icon {
+        min-width: 55px;
+        width: 55px;
+        height: 55px;
+
+        font-size: 22px;
+    }
+
+    .education-content h3 {
+        font-size: 20px;
+    }
+
+    .education-content h4 {
+        font-size: 15px;
+    }
+
+}
+/* ================= MY SERVICES ================= */
+
+.services {
+    padding: 80px 8%;
+    text-align: center;
+}
+
+.services .section-title {
+    margin-bottom: 15px;
+}
+
+.services .section-subtitle {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    color: #b8b8c7;
+    line-height: 1.7;
+}
+
+
+/* Services Grid */
+
+.services-container {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+
+/* Service Card */
+
+.service-card {
+    padding: 30px 25px;
+
+    text-align: left;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    border-radius: 18px;
+
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #00d4ff;
+
+    box-shadow: 0 15px 35px rgba(0, 212, 255, 0.15);
+}
+
+
+/* Service Icon */
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 22px;
+
+    border-radius: 15px;
+
+    background: linear-gradient(135deg, #8f6bff, #00d4ff);
+
+    color: #ffffff;
+
+    font-size: 25px;
+}
+
+
+/* Service Title */
+
+.service-card h3 {
+    margin-bottom: 15px;
+
+    color: #ffffff;
+
+    font-size: 21px;
+}
+
+
+/* Service Description */
+
+.service-card p {
+    margin-bottom: 20px;
+
+    color: #b8b8c7;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+}
+
+
+/* Service Tags */
+
+.service-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.service-tags span {
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    background: rgba(0, 212, 255, 0.10);
+
+    border: 1px solid rgba(0, 212, 255, 0.25);
+
+    color: #00d4ff;
+
+    font-size: 12px;
+
+    font-weight: 500;
+}
+
+
+/* ================= SERVICES RESPONSIVE ================= */
+
+@media (max-width: 900px) {
+
+    .services {
+        padding: 70px 5%;
+    }
+
+    .services-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .services {
+        padding: 60px 5%;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 25px 20px;
+    }
+
+    .service-card h3 {
+        font-size: 19px;
+    }
+
+}
+/* =========================================
+   CONTACT PREMIUM DARK THEME
+========================================= */
+
+.contact-section {
+    position: relative;
+    padding: 110px 0;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(59, 130, 246, 0.18),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(14, 165, 233, 0.15),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #07111f 0%,
+            #0b1b33 50%,
+            #06101d 100%
+        );
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   SECTION TITLE
+========================================= */
+
+.contact-section .section-title span {
+    color: #60a5fa;
+}
+
+.contact-section .section-title h2 {
+    color: #ffffff;
+}
+
+.contact-section .section-title p {
+    color: rgba(255, 255, 255, 0.68);
+}
+
+
+/* =========================================
+   CONTACT WRAPPER
+========================================= */
+
+.contact-wrapper {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================
+   CONTACT INFORMATION CARD
+========================================= */
+
+.contact-info {
+    background: rgba(255, 255, 255, 0.055);
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.25);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+
+/* =========================================
+   CONTACT INTRO
+========================================= */
+
+.contact-intro h3 {
+    color: #ffffff;
+}
+
+.contact-intro p {
+    color: rgba(255, 255, 255, 0.68);
+}
+
+
+/* =========================================
+   CONTACT ITEMS
+========================================= */
+
+.contact-icon {
+    color: #60a5fa;
+
+    background: rgba(96, 165, 250, 0.08);
+
+    border-color: rgba(96, 165, 250, 0.20);
+}
+
+.contact-details span {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.contact-details a,
+.contact-details p {
+    color: #ffffff;
+}
+
+.contact-details a:hover {
+    color: #60a5fa;
+}
+
+
+/* =========================================
+   SOCIAL LINKS
+========================================= */
+
+.contact-social {
+    border-top-color: rgba(255, 255, 255, 0.10);
+}
+
+.contact-social > span {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.social-links a {
+    color: #ffffff;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    border-color: rgba(255, 255, 255, 0.10);
+}
+
+.social-links a:hover {
+    color: #60a5fa;
+
+    background: rgba(96, 165, 250, 0.10);
+
+    border-color: rgba(96, 165, 250, 0.30);
+
+    box-shadow:
+        0 8px 25px rgba(37, 99, 235, 0.20);
+}
+
+
+/* =========================================
+   CONTACT FORM CARD
+========================================= */
+
+.contact-form-wrapper {
+    background: rgba(255, 255, 255, 0.055);
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.25);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-group label {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.form-group input,
+.form-group textarea {
+    color: #ffffff;
+
+    background: rgba(255, 255, 255, 0.045);
+
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(255, 255, 255, 0.40);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #60a5fa;
+
+    background: rgba(96, 165, 250, 0.05);
+
+    box-shadow:
+        0 0 0 3px rgba(96, 165, 250, 0.10);
+}
+
+
+/* =========================================
+   SEND MESSAGE BUTTON
+========================================= */
+
+.contact-submit {
+    color: #ffffff;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #0ea5e9
+    );
+
+    border: none;
+
+    box-shadow:
+        0 10px 25px rgba(37, 99, 235, 0.25);
+}
+
+.contact-submit:hover {
+    box-shadow:
+        0 14px 30px rgba(37, 99, 235, 0.35);
+}
+
+
+/* =========================================
+   BOTTOM CTA
+========================================= */
+
+.contact-bottom {
+    position: relative;
+    z-index: 2;
+
+    background: rgba(255, 255, 255, 0.055);
+
+    border-color: rgba(255, 255, 255, 0.10);
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.20);
+
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+}
+
+.contact-bottom h3 {
+    color: #ffffff;
+}
+
+.contact-bottom p {
+    color: rgba(255, 255, 255, 0.65);
+}
+
+
+/* =========================================
+   WHATSAPP BUTTON
+========================================= */
+
+.whatsapp-button {
+    color: #ffffff;
+
+    background: rgba(255, 255, 255, 0.06);
+
+    border-color: rgba(255, 255, 255, 0.12);
+}
+
+.whatsapp-button:hover {
+    color: #ffffff;
+
+    background: rgba(37, 211, 102, 0.12);
+
+    border-color: rgba(37, 211, 102, 0.35);
+
+    box-shadow:
+        0 10px 25px rgba(37, 211, 102, 0.15);
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .contact-section {
+        padding: 80px 0;
+    }
+
+    .contact-info,
+    .contact-form-wrapper {
+        background: rgba(255, 255, 255, 0.06);
+    }
 }
