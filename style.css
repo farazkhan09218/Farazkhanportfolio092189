@@ -3652,3 +3652,146 @@ body {
         transition: none;
     }
 }
+
+/* =====================================
+   FARAZ KHAN - PORTFOLIO INTRO SCREEN
+===================================== */
+
+#portfolio-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: #080b16;
+    color: #ffffff;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.65s ease, visibility 0.65s ease;
+}
+
+#portfolio-loader.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.loader-content {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+    animation: fkWelcome 0.9s ease both;
+}
+
+.loader-logo {
+    width: 112px;
+    height: 112px;
+    margin: 0 auto 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    border: 2px solid #9b7bff;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #171d35, #30205a);
+    box-shadow: 0 0 35px rgba(139, 92, 246, 0.35);
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: -5px;
+    animation: fkLogoFloat 2s ease-in-out infinite;
+}
+
+.loader-logo span:last-child {
+    color: #a78bfa;
+}
+
+.loader-content h1 {
+    margin: 0 0 12px;
+    color: #ffffff;
+    font-size: clamp(27px, 6vw, 43px);
+    font-weight: 800;
+    letter-spacing: 5px;
+}
+
+.loader-content p {
+    margin: 0 auto 28px;
+    color: #c4c8d8;
+    font-size: clamp(12px, 3vw, 15px);
+    line-height: 1.7;
+}
+
+.loader-line {
+    width: min(220px, 75%);
+    height: 3px;
+    margin: 0 auto 22px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #272d43;
+}
+
+.loader-line span {
+    display: block;
+    width: 45%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #8b5cf6, #67e8f9);
+    animation: fkLoading 1.2s ease-in-out infinite;
+}
+
+.loader-content small {
+    color: #a78bfa;
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+@keyframes fkWelcome {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fkLogoFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-7px);
+    }
+}
+
+@keyframes fkLoading {
+    from {
+        transform: translateX(-120%);
+    }
+    to {
+        transform: translateX(240%);
+    }
+}
+
+@media (max-width: 480px) {
+    .loader-logo {
+        width: 88px;
+        height: 88px;
+        border-radius: 24px;
+        font-size: 34px;
+    }
+
+    .loader-content h1 {
+        letter-spacing: 3px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .loader-content,
+    .loader-logo,
+    .loader-line span {
+        animation: none;
+    }
+}

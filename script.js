@@ -81,3 +81,42 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+/* Portfolio intro screen */
+(() => {
+    const loader = document.getElementById("portfolio-loader");
+
+    if (!loader) return;
+
+    let hasHidden = false;
+
+    function hidePortfolioLoader() {
+        if (hasHidden) return;
+        hasHidden = true;
+
+        const elapsed = performance.now();
+        const minimumTime = 1200;
+
+        // Keep the welcome screen visible briefly for the animation
+        const delay = Math.max(0, minimumTime - elapsed);
+
+        window.setTimeout(() => {
+            loader.classList.add("is-hidden");
+
+            window.setTimeout(() => {
+                loader.remove();
+            }, 750);
+        }, delay);
+    }
+
+    if (document.readyState === "complete") {
+        hidePortfolioLoader();
+    } else {
+        window.addEventListener("load", hidePortfolioLoader, {
+            once: true
+        });
+    }
+
+    // Fallback: prevent the intro screen from getting stuck
+    window.setTimeout(hidePortfolioLoader, 4000);
+})();
