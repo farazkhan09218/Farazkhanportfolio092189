@@ -1,7 +1,8 @@
-
+/* Portfolio interactions: typing animation + responsive navigation */
 "use strict";
 
 document.addEventListener("DOMContentLoaded", () => {
+    // Typing animation
     const words = [
         "IT Student",
         "AI Developer",
@@ -11,44 +12,72 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const typing = document.getElementById("typing");
 
-    // Stop safely if the typing element is missing
-    if (!typing) {
-        console.warn('Element with id="typing" was not found.');
-        return;
+    if (typing) {
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeEffect() {
+            const currentWord = words[wordIndex];
+
+            if (isDeleting) {
+                charIndex--;
+                typing.textContent = currentWord.substring(0, charIndex);
+            } else {
+                charIndex++;
+                typing.textContent = currentWord.substring(0, charIndex);
+            }
+
+            let speed = isDeleting ? 45 : 85;
+
+            if (!isDeleting && charIndex >= currentWord.length) {
+                isDeleting = true;
+                speed = 1400;
+            } else if (isDeleting && charIndex <= 0) {
+                charIndex = 0;
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+                speed = 250;
+            }
+
+            window.setTimeout(typeEffect, speed);
+        }
+
+        typeEffect();
     }
 
-    let wordIndex = 0;
-    let charIndex = 0;
-    let isDeleting = false;
+    // Accessible mobile navigation
+    const menuToggle = document.getElementById("menu-toggle");
+    const navigation = document.getElementById("primary-navigation");
 
-    function typeEffect() {
-        const currentWord = words[wordIndex];
+    if (menuToggle && navigation) {
+        const closeMenu = () => {
+            navigation.classList.remove("is-open");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.setAttribute("aria-label", "Open navigation menu");
+        };
 
-        if (isDeleting) {
-            charIndex--;
-            typing.textContent = currentWord.substring(0, charIndex);
-        } else {
-            charIndex++;
-            typing.textContent = currentWord.substring(0, charIndex);
-        }
+        menuToggle.addEventListener("click", () => {
+            const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
 
-        let speed = isDeleting ? 45 : 90;
+            menuToggle.setAttribute("aria-expanded", String(!isOpen));
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen ? "Open navigation menu" : "Close navigation menu"
+            );
+            navigation.classList.toggle("is-open", !isOpen);
+        });
 
-        // Pause when a complete word is displayed
-        if (!isDeleting && charIndex === currentWord.length) {
-            isDeleting = true;
-            speed = 1500;
-        }
+        navigation.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", closeMenu);
+        });
 
-        // Move to the next word after deleting the current one
-        if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            wordIndex = (wordIndex + 1) % words.length;
-            speed = 300;
-        }
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") closeMenu();
+        });
 
-        setTimeout(typeEffect, speed);
+        window.addEventListener("resize", () => {
+            if (window.innerWidth > 768) closeMenu();
+        });
     }
-
-    typeEffect();
 });
