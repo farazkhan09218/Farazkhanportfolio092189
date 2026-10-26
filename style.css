@@ -2836,3 +2836,585 @@ footer h2 {
         background: rgba(255, 255, 255, 0.06);
     }
 }
+
+
+
+/* =========================================================
+   FINAL PORTFOLIO FIXES
+   These overrides resolve conflicting repeated styles and
+   improve tablet/mobile layouts without removing sections.
+========================================================= */
+
+:root {
+    --portfolio-bg: #0d1028;
+    --portfolio-panel: #111827;
+    --portfolio-card: #1e293b;
+    --portfolio-purple: #8f6bff;
+    --portfolio-cyan: #00d4ff;
+    --portfolio-text: #ffffff;
+    --portfolio-muted: #b8b8c7;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    width: 100%;
+    min-width: 320px;
+    overflow-x: hidden;
+    background: var(--portfolio-bg);
+}
+
+img,
+video,
+iframe {
+    max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+    max-width: 100%;
+}
+
+button,
+.btn,
+.project-btn,
+.project-view-btn,
+.contact-submit,
+.whatsapp-button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--portfolio-cyan);
+    outline-offset: 3px;
+}
+
+/* Consistent section spacing and heading sizes */
+.section-title {
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+.section-subtitle {
+    padding-inline: 12px;
+    overflow-wrap: anywhere;
+}
+
+.about,
+.hero,
+.skills,
+.projects,
+.projects-section,
+.education,
+.certificates,
+.services,
+.experience,
+.stats,
+.contact-section {
+    min-width: 0;
+}
+
+.about-content,
+.left,
+.right,
+.project-content,
+.education-content,
+.contact-info,
+.contact-form-wrapper {
+    min-width: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+a,
+span {
+    overflow-wrap: anywhere;
+}
+
+/* Make card grids flexible even when text or screen width changes */
+.skills-container,
+.projects-container,
+.projects-grid,
+.services-container,
+.certificate-container,
+.stats-container {
+    width: 100%;
+    min-width: 0;
+}
+
+.skill-card,
+.project-card,
+.service-card,
+.certificate-card,
+.stat-card,
+.education-card,
+.timeline-item {
+    min-width: 0;
+    height: 100%;
+}
+
+/* Hero layout */
+.hero {
+    gap: clamp(24px, 4vw, 60px);
+}
+
+.left {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.right {
+    flex: 0 1 400px;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.right img {
+    display: block;
+    width: min(100%, 400px);
+    height: auto;
+    aspect-ratio: 1 / 1;
+}
+
+/* Contact layout */
+.contact-section > *,
+.contact-wrapper,
+.contact-bottom {
+    max-width: 100%;
+}
+
+.contact-wrapper {
+    width: min(1200px, 90%);
+    margin-inline: auto;
+}
+
+.contact-bottom {
+    width: min(1200px, 90%);
+    margin-inline: auto;
+}
+
+.form-group input,
+.form-group textarea {
+    min-width: 0;
+}
+
+.whatsapp-float {
+    max-width: calc(100vw - 30px);
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .navbar {
+        padding: 18px 5%;
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px 18px;
+    }
+
+    .navbar ul li {
+        margin-left: 0;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 70px 6%;
+        gap: 30px;
+    }
+
+    .left h1 {
+        font-size: clamp(38px, 5.5vw, 55px);
+    }
+
+    .left h3 {
+        font-size: clamp(20px, 3vw, 26px);
+    }
+
+    .right {
+        flex-basis: 330px;
+    }
+
+    .about {
+        padding: 75px 6%;
+        gap: 35px;
+    }
+
+    .about-image {
+        flex: 0 1 40%;
+    }
+
+    .about-image img {
+        width: 100%;
+        max-width: 330px;
+        display: block;
+    }
+
+    .about-content {
+        flex: 1 1 0;
+        width: auto;
+    }
+
+    .about-content h2 {
+        font-size: clamp(30px, 4vw, 40px);
+    }
+
+    .skills-container,
+    .services-container,
+    .projects-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 16px 5%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .logo {
+        width: 100%;
+        font-size: 26px;
+    }
+
+    .navbar ul {
+        width: 100%;
+        gap: 10px 16px;
+    }
+
+    .navbar ul li a {
+        display: inline-block;
+        padding: 5px 0;
+        font-size: 14px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 55px 6% 65px;
+        gap: 28px;
+    }
+
+    .left {
+        width: 100%;
+    }
+
+    .left h1 {
+        font-size: clamp(34px, 9vw, 48px);
+        line-height: 1.12;
+        margin: 12px 0;
+    }
+
+    .left h2 {
+        font-size: clamp(19px, 5vw, 25px);
+        line-height: 1.4;
+    }
+
+    .left h3 {
+        font-size: 21px;
+    }
+
+    .left p {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+
+    .right {
+        width: 100%;
+        flex: 0 1 auto;
+    }
+
+    .right img {
+        width: min(68vw, 270px);
+        border-width: 4px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .hero-buttons .btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .about {
+        flex-direction: column;
+        text-align: center;
+        padding: 65px 6%;
+        gap: 28px;
+    }
+
+    .about-image {
+        width: 100%;
+    }
+
+    .about-image img {
+        width: min(75vw, 280px);
+        margin-inline: auto;
+    }
+
+    .about-content {
+        width: 100%;
+    }
+
+    .about-content h2 {
+        font-size: clamp(28px, 7vw, 36px);
+    }
+
+    .about-content p {
+        font-size: 15px;
+        line-height: 1.8;
+    }
+
+    .skills,
+    .projects,
+    .projects-section,
+    .education,
+    .certificates,
+    .services,
+    .experience,
+    .stats {
+        padding: 60px 5%;
+    }
+
+    .section-title,
+    .projects-section .section-title h2 {
+        font-size: clamp(28px, 7vw, 36px);
+        margin-bottom: 30px;
+    }
+
+    .skills-container,
+    .services-container,
+    .projects-container,
+    .projects-grid,
+    .certificate-container,
+    .stats-container {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .skill-card,
+    .service-card,
+    .project-card,
+    .certificate-card,
+    .stat-card,
+    .timeline-item {
+        padding: 22px 18px;
+    }
+
+    .project-image {
+        height: 210px;
+    }
+
+    .education-card {
+        flex-direction: column;
+        gap: 18px;
+        padding: 24px 20px;
+    }
+
+    .education-content h3 {
+        font-size: 20px;
+        line-height: 1.35;
+    }
+
+    .stat-card h2 {
+        font-size: 38px;
+    }
+
+    .contact-section {
+        padding: 65px 0;
+    }
+
+    .contact-section .section-title {
+        padding-inline: 6%;
+        margin-bottom: 35px;
+    }
+
+    .contact-section .section-title h2 {
+        font-size: clamp(27px, 7vw, 34px);
+    }
+
+    .contact-section .section-title p {
+        font-size: 14px;
+    }
+
+    .contact-wrapper,
+    .contact-bottom {
+        width: 90%;
+    }
+
+    .contact-info,
+    .contact-form-wrapper {
+        padding: 25px 20px;
+        border-radius: 16px;
+    }
+
+    .form-row {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+    }
+
+    .contact-item {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .contact-icon {
+        width: 44px;
+        height: 44px;
+        flex: 0 0 44px;
+    }
+
+    .contact-bottom {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 20px;
+        padding: 24px 20px;
+    }
+
+    .whatsapp-button,
+    .contact-submit {
+        width: 100%;
+    }
+
+    .whatsapp-float {
+        right: 12px;
+        bottom: 12px;
+        padding: 10px;
+    }
+
+    .whatsapp-float i {
+        font-size: 26px;
+    }
+
+    .footer {
+        padding: 35px 15px;
+    }
+
+    .footer-tagline {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .social-icons {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    .social-icons a {
+        width: 42px;
+        height: 42px;
+        flex-basis: 42px;
+    }
+
+    .social-icons i {
+        font-size: 24px;
+    }
+
+    .copyright {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+}
+
+/* Extra-small phones */
+@media (max-width: 380px) {
+    .navbar {
+        padding-inline: 12px;
+    }
+
+    .navbar ul {
+        gap: 8px 12px;
+    }
+
+    .navbar ul li a {
+        font-size: 13px;
+    }
+
+    .hero {
+        padding-inline: 18px;
+    }
+
+    .left h1 {
+        font-size: 32px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+    }
+
+    .skills,
+    .projects,
+    .projects-section,
+    .education,
+    .certificates,
+    .services,
+    .experience,
+    .stats {
+        padding-inline: 16px;
+    }
+
+    .contact-wrapper,
+    .contact-bottom {
+        width: calc(100% - 28px);
+    }
+
+    .contact-info,
+    .contact-form-wrapper {
+        padding: 22px 16px;
+    }
+
+    .whatsapp-float {
+        right: 10px;
+        bottom: 10px;
+    }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
